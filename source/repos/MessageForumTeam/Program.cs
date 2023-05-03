@@ -1,3 +1,6 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using MessageForumTeam.Data;
 namespace MessageForumTeam
 {
     public class Program
@@ -5,6 +8,8 @@ namespace MessageForumTeam
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            builder.Services.AddDbContext<MessageForumTeamContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("MessageForumTeamContext") ?? throw new InvalidOperationException("Connection string 'MessageForumTeamContext' not found.")));
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
