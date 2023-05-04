@@ -22,24 +22,14 @@ namespace MessageForumTeam.Models
                 context.Post.AddRange(
                     new Post
                     {
-
                         Author = "John Smith",
                         Title = "How to get rich fast",
                         Description = "Top 10 ways on how to make a lot of money fastt",
                         DatePosted = DateTime.Now,
-                        Comments = new List<string> { "Great post!", "Thanks for sharing.", "I found this really helpful." },
-                        Likes = new List<string> {"beastboy64", "aceventura123","techman53" },
-                        Tags = "Finance"
-
-                    },
-                    new Post
-                     {
-                        Author = "John Smith",
-                        Title = "How to get rich fast",
-                        Description = "Top 10 ways on how to make a lot of money fastt",
-                        DatePosted = DateTime.Now,
-                        Comments = new List<string> { "Great post!", "Thanks for sharing.", "I found this really helpful." },
-                        Likes = new List<string> { "beastboy64", "aceventura123", "techman53" },
+                        Comments = "This was great",
+                        //Comments = new List<string> { "Great post!", "Thanks for sharing.", "I found this really helpful." },
+                        //Likes = new List<string> { "beastboy64", "aceventura123", "techman53" },
+                        Likes = "techman",
                         Tags = "Finance"
 
                     },
@@ -49,8 +39,23 @@ namespace MessageForumTeam.Models
                         Title = "How to get rich fast",
                         Description = "Top 10 ways on how to make a lot of money fastt",
                         DatePosted = DateTime.Now,
-                        Comments = new List<string> { "Great post!", "Thanks for sharing.", "I found this really helpful." },
-                        Likes = new List<string> { "beastboy64", "aceventura123", "techman53" },
+                        Comments = "This was great",
+                        //Comments = new List<string> { "Great post!", "Thanks for sharing.", "I found this really helpful." },
+                        //Likes = new List<string> { "beastboy64", "aceventura123", "techman53" },
+                        Likes = "techman",
+                        Tags = "Finance"
+
+                    },
+                    new Post
+                    {
+                        Author = "John Smith",
+                        Title = "How to get rich fast",
+                        Description = "Top 10 ways on how to make a lot of money fastt",
+                        DatePosted = DateTime.Now,
+                        Comments = "This was great",
+                        //Comments = new List<string> { "Great post!", "Thanks for sharing.", "I found this really helpful." },
+                        //Likes = new List<string> { "beastboy64", "aceventura123", "techman53" },
+                        Likes = "techman",
                         Tags = "Finance"
 
                     }
