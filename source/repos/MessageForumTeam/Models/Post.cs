@@ -10,9 +10,9 @@ namespace MessageForumTeam.Models
         public string? Author { get; set; }
         [DataType(DataType.Date)]
         public DateTime DatePosted { get; set; }
-        public string? Comments { get; set; }
+        public List<string>? Comments { get; set; }
 
-        public int? Likes { get; set; }
+        public List<string>? Likes { get; set; }
         public string? Tags { get; set; }
 
 
