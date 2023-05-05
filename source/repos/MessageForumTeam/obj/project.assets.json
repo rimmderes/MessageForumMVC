@@ -10611,19 +10611,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jason\\.nuget\\packages\\": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jason\\Desktop\\PostitMVC\\source\\repos\\MessageForumTeam\\MessageForumTeam.csproj",
+      "projectUniqueName": "C:\\Users\\User\\source\\repos\\MessageForumTeam\\MessageForumTeam.csproj",
       "projectName": "MessageForumTeam",
-      "projectPath": "C:\\Users\\jason\\Desktop\\PostitMVC\\source\\repos\\MessageForumTeam\\MessageForumTeam.csproj",
-      "packagesPath": "C:\\Users\\jason\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jason\\Desktop\\PostitMVC\\source\\repos\\MessageForumTeam\\obj\\",
+      "projectPath": "C:\\Users\\User\\source\\repos\\MessageForumTeam\\MessageForumTeam.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\User\\source\\repos\\MessageForumTeam\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\jason\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
