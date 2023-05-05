@@ -5,8 +5,8 @@ using Microsoft.EntityFrameworkCore;
 using System.Security.Cryptography.Xml;
 using System.Xml.Linq;
 
-namespace MessageForumTeam.Models
-{
+namespace MessageForumTeam.Models;
+
     public static class SeedData
     {
         // The Seed method takes the database context object as an input parameter, and the code in the method uses that object to add new entities to the database.
@@ -70,4 +70,4 @@ namespace MessageForumTeam.Models
         }
 
     }
-}
+

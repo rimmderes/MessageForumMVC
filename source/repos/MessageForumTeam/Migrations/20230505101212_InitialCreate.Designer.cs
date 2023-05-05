@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MessageForumTeam.Migrations
 {
     [DbContext(typeof(MessageForumTeamContext))]
-    [Migration("20230503115950_InitialCreate")]
+    [Migration("20230505101212_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -43,8 +43,8 @@ namespace MessageForumTeam.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("Likes")
-                        .HasColumnType("int");
+                    b.Property<string>("Likes")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Tags")
                         .HasColumnType("nvarchar(max)");

@@ -56,7 +56,7 @@ namespace MessageForumTeam.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,Description,Author,DatePosted,Comments,Likes,Tags")] Post post)
+        public async Task<IActionResult> Create([Bind("Id,Title,Description,Author,Comments,Likes,Tags")] Post post)
         {
             if (ModelState.IsValid)
             {
