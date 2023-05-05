@@ -17,6 +17,5 @@ namespace MessageForumTeam.Models
         public string? Likes { get; set; }
         public string? Tags { get; set; }
 
-
     }
 }
