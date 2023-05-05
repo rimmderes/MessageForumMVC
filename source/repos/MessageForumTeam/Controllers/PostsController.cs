@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MessageForumTeam.Data;
 using MessageForumTeam.Models;
+using Microsoft.CodeAnalysis.CSharp;
 
 namespace MessageForumTeam.Controllers
 {
@@ -20,11 +21,36 @@ namespace MessageForumTeam.Controllers
         }
 
         // GET: Posts
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string postTag, string searchString)
         {
-              return _context.Post != null ? 
-                          View(await _context.Post.ToListAsync()) :
-                          Problem("Entity set 'MessageForumTeamContext.Post'  is null.");
+              if (_context.Post == null)
+            {
+                return Problem("Entity set 'MessageForumTeamConext.Post' is null. ");
+            }
+              IQueryable<string> tagQuery = from p in _context.Post
+                                            orderby p.Tags
+                                            select p.Tags;
+
+            var posts = from p in _context.Post
+                        select p;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                posts = posts.Where(p => p.Title!.Contains(searchString));
+            }
+
+            if (!String.IsNullOrEmpty(postTag))
+            {
+                posts = posts.Where(t => t.Tags == postTag);
+            }
+
+            var postTagVM = new PostTagViewModel
+            {
+                Tags = new SelectList(await tagQuery.Distinct().ToListAsync()),
+                Posts = await posts.ToListAsync()
+            };
+
+            return View(postTagVM);
         }
 
         // GET: Posts/Details/5
@@ -56,7 +82,7 @@ namespace MessageForumTeam.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,Description,Author,Comments,Likes,Tags")] Post post)
+        public async Task<IActionResult> Create([Bind("Id,Title,Description,Author,DatePosted,Comments,Likes,Tags")] Post post)
         {
             if (ModelState.IsValid)
             {

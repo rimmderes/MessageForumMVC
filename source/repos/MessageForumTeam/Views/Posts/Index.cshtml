@@ -1,4 +1,4 @@
-﻿@model IEnumerable<MessageForumTeam.Models.Post>
+﻿@model MessageForumTeam.Models.PostTagViewModel
 
 @{
     ViewData["Title"] = "Index";
@@ -10,9 +10,12 @@
     <a asp-action="Create">Create New</a>
 </p>
 
-
 <form asp-controller="Posts" asp-action="Index">
     <p>
+        <select asp-for="PostTag" asp-items="Model.Tags">
+            <option value="">ALL</option>
+        </select>
+
         Title: <input type="text" name="SearchString" />
         <input type="submit" value="Filter" />
     </p>
@@ -23,31 +26,31 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Title)
+                @Html.DisplayNameFor(model => model.Posts![0].Title)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Description)
+                @Html.DisplayNameFor(model => model.Posts![0].Description)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Author)
+                @Html.DisplayNameFor(model => model.Posts![0].Author)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DatePosted)
+                @Html.DisplayNameFor(model => model.Posts![0].DatePosted)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Comments)
+                @Html.DisplayNameFor(model => model.Posts![0].Comments)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Likes)
+                @Html.DisplayNameFor(model => model.Posts![0].Likes)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Tags)
+                @Html.DisplayNameFor(model => model.Posts![0].Tags)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+@foreach (var item in Model.Posts!) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Title)
