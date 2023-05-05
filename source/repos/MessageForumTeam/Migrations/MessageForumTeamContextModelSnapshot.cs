@@ -40,8 +40,8 @@ namespace MessageForumTeam.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("Likes")
-                        .HasColumnType("int");
+                    b.Property<string>("Likes")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Tags")
                         .HasColumnType("nvarchar(max)");
