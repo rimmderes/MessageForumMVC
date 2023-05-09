@@ -1,7 +1,20 @@
 ﻿@model MessageForumTeam.Models.PostTagViewModel
-
+    
 @{
     ViewData["Title"] = "Index";
+
+    string TitleTooLong(string title)
+    {
+        if (title != null && title.Length >= 50)
+        {
+            string newTitle = title.Remove(50, title.Length);
+            return newTitle + "...";
+        } else
+        {
+            return title;
+        }
+    }
+
 }
 
 <h2>Index</h2>
@@ -25,7 +38,7 @@
 <table class="table">
     <thead>
         <tr>
-            <th>
+            <th >
                 @Html.DisplayNameFor(model => model.Posts![0].Title)
             </th>
             <th>
@@ -51,29 +64,35 @@
     </thead>
     <tbody>
 @foreach (var item in Model.Posts!) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Title)
+            <tr class="postIt">
+                <td class="post-title">
+                    @{
+                        string newTitle = item.MaxTitleLength();
+                    }
+                    @Html.DisplayFor(modelItem => newTitle) 📝
             </td>
-            <td>
+            <td class="post-description">
                 @Html.DisplayFor(modelItem => item.Description)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Author)
+            <td class="post-author">
+                👤 @Html.DisplayFor(modelItem => item.Author)
             </td>
-            <td>
+            <td class="post-date">
                 @Html.DisplayFor(modelItem => item.DatePosted)
             </td>
-            <td>
+            <td class="post-comments">
                 @Html.DisplayFor(modelItem => item.Comments)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Likes)
+            <td class="post-likes">
+                    @{
+                        int numOfLikes = item.LikesToInt();
+                    }
+                    <i class="fa-regular fa-thumbs-up"></i> Likes: @Html.DisplayFor(modelItem => numOfLikes)
             </td>
-            <td>
+            <td class="post-tags">
                 @Html.DisplayFor(modelItem => item.Tags)
             </td>
-            <td>
+            <td class="post-details">
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>

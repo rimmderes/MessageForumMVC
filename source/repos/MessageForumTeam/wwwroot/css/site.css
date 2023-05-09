@@ -1,3 +1,34 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.background-animation {
+    animation-name: slide;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    background: url('../Images/istockphoto-175206996-170667a.jpg');
+    background-size: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+@keyframes slide {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: -2000px 0;
+    }
+}
+
 html {
   font-size: 14px;
 }
@@ -19,4 +50,83 @@ html {
 
 body {
   margin-bottom: 60px;
+}
+
+.postIt {
+
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 0.4fr;
+    grid-template-rows: 2fr 3fr 1fr 1fr;
+    grid-template-areas:
+        "header header header"
+        "description description date"
+        "author more comments"
+        "tags info likes";
+    background-color: #FFFF88;
+    box-shadow: 5px 5px 10px;
+    transition: 0.2s;
+    opacity: 0.7;
+}
+
+.postIt:hover {
+    border: 3px solid #e7cfbc;
+    cursor: pointer;
+    box-shadow: 10px 10px 10px;
+    opacity: 1;
+}
+
+
+.table {
+    border-collapse: separate;
+    border-spacing: 0 20px;
+    
+}
+
+th {
+    display: none;
+}
+
+td {
+    padding: 0px 0px;
+    border: 0px;
+}
+
+.post-title {
+    grid-area: header;
+    text-align: center;
+}
+
+.post-description {
+    grid-area: description;
+    text-align: center;
+}
+
+.post-author {
+    grid-area: author;
+}
+
+.post-date {
+    grid-area: date;
+    font-weight: bold;
+}
+
+.post-comments {
+    grid-area: comments;
+}
+
+.post-likes {
+    grid-area: likes;
+    text-align: center;
+    font-weight: bold;
+}
+
+.post-tags {
+    grid-area: tags;
+    text-align: center;
+    font-weight: bold;
+}
+
+.post-details {
+    grid-area: info;
+    text-align: center;
 }

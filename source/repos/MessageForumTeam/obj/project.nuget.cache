@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "L51q/RKwOIMywgGYFXnOGLVGcqQ8nq3DmCF+ISha/Put9a9awq6kieWM3ZguSGeC9JBWpRHLsoiUXYJeTf9hXg==",
+  "dgSpecHash": "8g6ONzw/sYcHQRgJn8l8+ZwoulGIPDyHxHKUtxHDE5XlPJLOdsmMflOYtOjEGH7FiwnlAtAb8juGNVVpAQlZzA==",
   "success": true,
   "projectFilePath": "C:\\Users\\conne\\Documents\\grayce\\projects\\MessageForumMVC\\source\\repos\\MessageForumTeam\\MessageForumTeam.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\conne\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\conne\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
+    "C:\\Users\\conne\\.nuget\\packages\\fontawesome\\4.7.0\\fontawesome.4.7.0.nupkg.sha512",
     "C:\\Users\\conne\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\conne\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\6.0.11\\microsoft.aspnetcore.razor.language.6.0.11.nupkg.sha512",
     "C:\\Users\\conne\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",

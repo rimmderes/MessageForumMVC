@@ -22,5 +22,28 @@ namespace MessageForumTeam.Models
         public string? Likes { get; set; }
         public string? Tags { get; set; }
 
+
+
+        public string MaxTitleLength()
+        {
+            //int length = this.Title.Length;
+            int maxLength = 20;
+            string newTitle = this.Title.Length > maxLength ? this.Title.Substring(0, maxLength) + "..." : this.Title;
+            return newTitle;
+
+        }
+
+        public int LikesToInt()
+        {
+            if (this.Likes == null)
+            {
+                return 0;
+            } else
+            {
+            string[] LikesArr = this.Likes.Split(" ");
+                return LikesArr.Length;
+            }
+            
+        }
     }
 }
