@@ -550,6 +550,7 @@ C:\Users\jason\Desktop\PostitMVC\source\repos\MessageForumTeam\obj\Debug\net7.0\
 C:\Users\jason\Desktop\PostitMVC\source\repos\MessageForumTeam\obj\Debug\net7.0\ref\MessageForumTeam.dll
 C:\Users\conne\Documents\grayce\projects\MessageForumMVC\source\repos\MessageForumTeam\bin\Debug\net7.0\appsettings.Development.json
 C:\Users\conne\Documents\grayce\projects\MessageForumMVC\source\repos\MessageForumTeam\bin\Debug\net7.0\appsettings.json
+C:\Users\conne\Documents\grayce\projects\MessageForumMVC\source\repos\MessageForumTeam\bin\Debug\net7.0\libman.json
 C:\Users\conne\Documents\grayce\projects\MessageForumMVC\source\repos\MessageForumTeam\bin\Debug\net7.0\MessageForumTeam.staticwebassets.runtime.json
 C:\Users\conne\Documents\grayce\projects\MessageForumMVC\source\repos\MessageForumTeam\bin\Debug\net7.0\MessageForumTeam.exe
 C:\Users\conne\Documents\grayce\projects\MessageForumMVC\source\repos\MessageForumTeam\bin\Debug\net7.0\MessageForumTeam.deps.json
@@ -823,4 +824,3 @@ C:\Users\conne\Documents\grayce\projects\MessageForumMVC\source\repos\MessageFor
 C:\Users\conne\Documents\grayce\projects\MessageForumMVC\source\repos\MessageForumTeam\obj\Debug\net7.0\MessageForumTeam.pdb
 C:\Users\conne\Documents\grayce\projects\MessageForumMVC\source\repos\MessageForumTeam\obj\Debug\net7.0\MessageForumTeam.genruntimeconfig.cache
 C:\Users\conne\Documents\grayce\projects\MessageForumMVC\source\repos\MessageForumTeam\obj\Debug\net7.0\ref\MessageForumTeam.dll
-C:\Users\conne\Documents\grayce\projects\MessageForumMVC\source\repos\MessageForumTeam\bin\Debug\net7.0\libman.json

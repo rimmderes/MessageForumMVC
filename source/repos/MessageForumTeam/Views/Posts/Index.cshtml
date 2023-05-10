@@ -3,17 +3,17 @@
 @{
     ViewData["Title"] = "Index";
 
-    string TitleTooLong(string title)
-    {
-        if (title != null && title.Length >= 50)
-        {
-            string newTitle = title.Remove(50, title.Length);
-            return newTitle + "...";
-        } else
-        {
-            return title;
-        }
-    }
+    //string TitleTooLong(string title)
+    //{
+    //    if (title != null && title.Length >= 50)
+    //    {
+    //        string newTitle = title.Remove(50, title.Length);
+    //        return newTitle + "...";
+    //    } else
+    //    {
+    //        return title;
+    //    }
+    //}
 
 }
 
@@ -66,13 +66,14 @@
 @foreach (var item in Model.Posts!) {
             <tr class="postIt">
                 <td class="post-title">
-                    @{
-                        string newTitle = item.MaxTitleLength();
-                    }
-                    @Html.DisplayFor(modelItem => newTitle) 📝
+                   
+                    @Html.DisplayFor(modelItem => item.Title) 📝
             </td>
             <td class="post-description">
-                @Html.DisplayFor(modelItem => item.Description)
+                    @{
+                        string newDescription = item.MaxDescriptionLength();
+                    }
+                    @Html.DisplayFor(modelItem => newDescription)
             </td>
             <td class="post-author">
                 👤 @Html.DisplayFor(modelItem => item.Author)
@@ -81,7 +82,10 @@
                 @Html.DisplayFor(modelItem => item.DatePosted)
             </td>
             <td class="post-comments">
-                @Html.DisplayFor(modelItem => item.Comments)
+                    @{
+                        int commentsNum = item.CommentsToInt();
+                    }
+                    @Html.DisplayFor(modelItem => commentsNum) Comment
             </td>
             <td class="post-likes">
                     @{
